@@ -1,0 +1,278 @@
+// .contact__space はコンタクトページの上部の余白を作るために必要
+.contact__space {
+  margin-top: 150px;
+}
+
+.company__p-greeting__qr {
+  width: 600px;
+  margin: 30px auto 0;
+  max-width: 100%;
+  @include mq("sp") {
+    width: 400px;
+    max-width: 100%;
+  }
+}
+
+.contact__form {
+  margin-top: 90px;
+}
+
+/*Contact Form 7カスタマイズ*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+button,
+// select,
+textarea {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  &:checked {
+    background-color: rgba(117, 169, 255, 0.7);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="submit"],
+input[type="button"],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/*項目の下線*/
+.inquiry {
+  margin: 60px auto 0;
+  display: flex;
+  align-items: centerw;
+  tbody {
+    width: inherit;
+  }
+}
+.inquiry tr {
+  width: 100%;
+  display: flex;
+  @include mq("sp") {
+    display: block;
+  }
+  &:not(:first-child) {
+    margin-top: 60px;
+  }
+}
+.inquiry th,
+.inquiry td {
+  border: none;
+  background: #fff;
+  @include mq("sp") {
+    width: 100%;
+    display: block;
+  }
+}
+.inquiry th {
+  border-bottom: 2px solid $cr-m;
+  width: 30%;
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+.inquiry td {
+  width: 70%;
+  border-bottom: 2px solid #e2e1e1;
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+
+/*必須・任意のラベルの形状*/
+.formlabel {
+  padding: 5px;
+  font-size: 0.8em;
+  border-radius: 5px;
+  margin-right: 10px;
+  position: relative;
+}
+
+/*必須のカラー*/
+.must {
+  background: #ff82b2;
+  color: #fff;
+}
+
+/*任意のカラー*/
+.may {
+  background: #75a9ff;
+  color: #fff;
+}
+
+.wpcf-13c-btn-confirm {
+  display: block;
+  padding: 15px 120px;
+  background: $cr-m;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 25px auto 0;
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+.contact-confirm {
+  margin: 60px auto 0;
+  text-align: center;
+  [type="button"],
+  [type="submit"] {
+    padding: 1em 5em;
+    @include mq("sp") {
+      width: 100%;
+    }
+  }
+}
+.contact-sending {
+  display: flex;
+  justify-content: center;
+  @include mq("sp") {
+    display: block;
+  }
+}
+.contact-modify {
+  button,
+  [type="button"],
+  [type="submit"] {
+    background-color: #444;
+    padding: 1em 5em;
+    @include mq("sp") {
+      width: 100%;
+    }
+  }
+}
+.contact-send {
+  margin-left: 40px;
+  button,
+  [type="button"],
+  [type="submit"] {
+    padding: 1em 5em;
+    @include mq("sp") {
+      width: 100%;
+    }
+  }
+  @include mq("sp") {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+/*送信ボタンのデザイン変更*/
+#formbtn {
+  display: block;
+  padding: 15px 120px;
+  background: $cr-m;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 25px auto 0;
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+/*送信ボタンマウスホバー*/
+#formbtn:hover {
+  background: $cr-m;
+  color: #fff;
+}
+
+/*ラジオボタンのデザイン変更*/
+.inquiry .wpcf7-radio input[type="radio"] {
+  display: none;
+  vertical-align: middle;
+}
+.inquiry .wpcf7-radio > .wpcf7-list-item {
+  margin-left: 0;
+}
+.inquiry .wpcf7-radio input[type="radio"] + span {
+  padding-left: 25px;
+  position: relative;
+  margin-right: 25px;
+  vertical-align: middle;
+}
+.inquiry .wpcf7-radio input[type="radio"] + span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.inquiry .wpcf7-radio input[type="radio"]:checked + span {
+  color: #d01137;
+}
+.inquiry .wpcf7-radio input[type="radio"]:checked + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 11px;
+  height: 11px;
+  background: #d01137;
+  border-radius: 50%;
+}
+.contactfin__wrapper {
+  text-align: center;
+  margin: 100px 0;
+}
+.contactfin__text {
+  font-size: 2.2rem;
+  @include mq("sp") {
+    font-size: 1.8rem;
+  }
+}
+.contactfin__button {
+  margin-top: 40px;
+}
+.contactfin__button__link {
+  display: inline-block;
+  padding: 20px 30px;
+  background-color: $cr-m;
+  color: #fff;
+  text-decoration: none;
+  @include mq("sp") {
+    width: 100%;
+  }
+}
+// 自動入力時に色をあてない
+// https://teratail.com/questions/171007
+@keyframes onAutoFillStart {
+  from {
+  }
+  to {
+  }
+}
+
+input:-webkit-autofill {
+  animation-name: onAutoFillStart;
+  transition: background-color 50000s ease-in-out 0s;
+}

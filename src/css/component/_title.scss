@@ -1,0 +1,14 @@
+.c-util__title {
+  &::first-line {
+    white-space: nowrap;
+    font-size: 3.2rem;
+    color: #023c7b;
+    text-align: center;
+  }
+  &::first-letter {
+    white-space: nowrap;
+    color: #757575;
+  }
+  font-size: 1.6rem;
+  text-align: center;
+}

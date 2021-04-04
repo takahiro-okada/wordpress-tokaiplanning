@@ -1,0 +1,297 @@
+.service {
+}
+.service__p-feature__image {
+  margin-top: 60px;
+  img {
+    width: 100%;
+  }
+}
+.service__p-feature__text {
+  width: 80%;
+  margin: 60px auto 0;
+  font-size: 2rem;
+  @include mq("sp") {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}
+.highlight {
+  background-color: $cr-m;
+  color: #fff;
+  width: fit-content;
+  padding: 0 10px;
+}
+
+/*---------------------------------
+
+  casestudy
+
+---------------------------------*/
+.service__p-casestudy {
+  margin-top: 60px;
+}
+.service__p-casestudy__content {
+  display: flex;
+  @include mq("sp") {
+    display: block;
+  }
+}
+.service__p-casestudy__item {
+  margin-top: 60px;
+  width: calc(33.3333% - 40px);
+  text-align: center;
+  &:not(:first-child) {
+    margin-left: 60px;
+  }
+  @include mq("sp") {
+    width: 100%;
+    &:not(:first-child) {
+      margin: 30px auto 0;
+    }
+  }
+}
+.service__p-casestudy__desc {
+  margin-top: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  @include mq("sp") {
+    font-size: 1.8rem;
+  }
+}
+
+/*---------------------------------
+
+  flow
+
+---------------------------------*/
+.service__p-flow {
+  margin: 90px 0 180px;
+}
+.service__p-flow__content {
+  margin-top: 60px;
+}
+.service__p-flow__item {
+  display: flex;
+  position: relative;
+  counter-increment: title;
+  @include mq("sp") {
+    display: block;
+  }
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  &::after {
+    content: counter(title) ".";
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 60px;
+    font-size: 3.6rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    text-align: center;
+    @include mq("sp") {
+      top: 35px;
+      left: 40px;
+    }
+  }
+}
+
+.service__p-flow__title {
+  flex: 0 0 400px;
+  padding: 20px 30px 20px 100px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 2.4rem;
+  background-color: #003c7b;
+  position: relative;
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    @include mq("sp") {
+      display: none;
+    }
+  }
+  @include mq("sp") {
+    font-size: 2rem;
+    padding: 20px 30px 20px 70px;
+  }
+}
+
+.service__p-flow__desc {
+  flex: 0 1 100%;
+  padding: 20px 30px;
+  background-color: #dddddd;
+  font-size: 1.8rem;
+  position: relative;
+  @include mq("sp") {
+    font-size: 1.6rem;
+  }
+}
+.service__p-flow__item:nth-child(2) .service__p-flow__desc.-search {
+  @include mq("pc") {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 45px;
+      right: 100px;
+      background-image: url("../../image/icon-search.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center center;
+    }
+  }
+}
+.service__p-flow__item:nth-child(4) .service__p-flow__desc.-pc {
+  @include mq("pc") {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 80px;
+      right: 100px;
+      background-image: url("../../image/icon-pc.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center center;
+    }
+  }
+}
+/*---------------------------------
+
+  insurance
+
+---------------------------------*/
+.service__p-insurance {
+  margin-top: 60px;
+  margin-bottom: 300px;
+}
+.service__p-insurance__content {
+}
+.service__p-insurance__text {
+  width: 500px;
+  max-width: 100%;
+  margin: 30px auto 0;
+}
+
+/*---------------------------------
+
+  service / telephonepole
+
+---------------------------------*/
+.service__p-telephonepole {
+  margin-top: 60px;
+}
+.service__p-telephonepole__content {
+}
+.service__p-telephonepole__image {
+  margin: 30px auto 0;
+
+  text-align: center;
+  width: 519px;
+  max-width: 100%;
+}
+.service__p-telephonepole__desc {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+/*---------------------------------
+
+  service / construction
+
+---------------------------------*/
+.service__p-construction {
+  margin-top: 60px;
+}
+.service__p-construction__content {
+}
+.service__p-construction__image {
+  margin: 30px auto 0;
+  text-align: center;
+  width: 519px;
+  max-width: 100%;
+}
+.service__p-construction__desc {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+/*---------------------------------
+
+  service / dtp
+
+---------------------------------*/
+.service__p-dtp {
+  margin-top: 60px;
+}
+.service__p-dtp__content {
+}
+.service__p-dtp__image {
+  margin: 30px auto 0;
+  text-align: center;
+  max-width: 100%;
+  width: 520px;
+}
+.service__p-dtp__desc {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+/*---------------------------------
+
+  service / dismantling
+
+---------------------------------*/
+.service__p-dismantling {
+  margin: 90px auto 180px;
+}
+.service__p-dismantling__content {
+}
+.service__p-dismantling__image {
+  margin-top: 30px;
+  text-align: center;
+}
+.service__p-dismantling__desc {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+/*---------------------------------
+
+  service / repair
+
+---------------------------------*/
+.service__p-repair {
+  margin-top: 60px;
+}
+.service__p-repair__content {
+  display: flex;
+  justify-content: space-between;
+}
+.service__p-repair__item {
+  flex: 0 0 45%;
+  @include mq("sp") {
+    flex: 0 0 48%;
+  }
+}
+.service__p-repair__image {
+  margin-top: 30px;
+  text-align: center;
+}
+.service__p-repair__desc {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}

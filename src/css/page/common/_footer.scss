@@ -1,0 +1,141 @@
+.p-footer {
+	padding: 150px 0;
+	background-image: url(../../image/footer-bg.png);
+	z-index: 10;
+	margin-top: -65px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	@include mq("tab") {
+		margin-top: 60px;
+		background-image: none;
+		background-color: #e1e1e1;
+		padding: 100px 0;
+	}
+}
+
+.p-footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	@include mq("tab") {
+		display: block;
+	}
+}
+.p-footer__logo {
+	width: 350px;
+	max-width: 100%;
+	@include mq("tab") {
+		margin: 0 auto;
+	}
+}
+.p-footer__info {
+	white-space: nowrap;
+	@include mq("tab") {
+		margin: 30px auto 0;
+		text-align: center;
+	}
+}
+.p-footer__cta {
+	@include mq("tab") {
+		margin: 30px auto 0;
+	}
+}
+.p-footer__cta-list {
+	display: flex;
+	@include mq("tab") {
+		justify-content: center;
+	}
+}
+.p-footer__list {
+	display: flex;
+	margin-top: 130px;
+	justify-content: flex-end;
+	@include mq("tab") {
+		justify-content: center;
+		margin-top: 60px;
+	}
+	@include mq("sp") {
+		display: block;
+	}
+}
+.p-footer__item {
+	position: relative;
+	&:not(:first-child) {
+		margin-left: 95px;
+	}
+	@include mq("sp") {
+		margin: 30px auto 0;
+		text-align: center;
+		&:not(:first-child) {
+			margin: 30px auto 0;
+		}
+	}
+}
+.p-footer__link {
+	text-decoration: none;
+	font-weight: bold;
+}
+// トグルメニュー
+.footer-toggle-menu {
+	position: absolute;
+	width: 200px;
+	top: 30px;
+	@include mq("sp") {
+		position: relative;
+		margin: 0 auto;
+		top: 15px;
+	}
+}
+.footer-toggle-item {
+	@include mq("sp") {
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+}
+.footer-toggle-link {
+	text-decoration: none;
+	padding: 0.2em 0.5em;
+	white-space: nowrap;
+}
+.js-scroll-fadein {
+	transition: opacity 1s;
+	visibility: hidden;
+	opacity: 0;
+	&.is-fadein {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+/*--------------------------------
+  arrow
+--------------------------------*/
+.arrow {
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	color: $cr-m;
+	cursor: pointer;
+	background-color: #fff;
+	padding: 20px;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		opacity: 0.8;
+		bottom: 38px;
+		box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
+	}
+	&:before {
+		content: "";
+		width: 12px;
+		height: 12px;
+		border-top: solid 3px $cr-m;
+		border-right: solid 3px $cr-m;
+		transform: rotate(-45deg);
+		position: absolute;
+		left: 13px;
+	}
+	&:before {
+		top: 14px;
+	}
+}

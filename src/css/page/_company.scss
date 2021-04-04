@@ -1,0 +1,129 @@
+.p-company__bg {
+  background-image: url("../../image/company__bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+  position: relative;
+  padding: 60px 0;
+}
+
+/*---------------------------------
+
+  company-greeting
+
+---------------------------------*/
+.company__p-greeting {
+}
+.company__p-greeting__text {
+  margin-top: 30px;
+  font-size: 2rem;
+  @include mq("sp") {
+    font-size: 1.6rem;
+  }
+}
+
+/*---------------------------------
+
+  company-info
+
+---------------------------------*/
+.company__p-info {
+  margin: 120px 0 0;
+}
+table.companyprofile {
+  margin-top: 60px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  line-height: 1.5;
+}
+table.companyprofile .table__heading {
+  width: 25%;
+  padding: 15px 0;
+  font-size: 2.1rem;
+  font-weight: 400;
+  vertical-align: top;
+  text-align: center;
+  border-top: 2px solid #023c7b;
+  border-left: none;
+  border-right: none;
+  @include mq("sp") {
+    width: 100%;
+    display: block;
+    font-size: 1.6rem;
+  }
+}
+table.companyprofile tr:last-child .table__heading {
+  border-bottom: 2px solid #023c7b;
+  @include mq("sp") {
+    border-bottom: none;
+  }
+}
+table.companyprofile .table__desc {
+  display: inline-block;
+  font-size: 2.1rem;
+  width: 75%;
+  padding: 15px 0;
+  margin-left: 50px;
+  vertical-align: top;
+  border-top: 2px solid #000;
+  @include mq("sp") {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    border-top: none;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+table.companyprofile tr:last-child .table__desc {
+  border-bottom: 2px solid #000;
+  @include mq("sp") {
+    border-bottom: 2px solid $cr-m;
+  }
+}
+
+/*---------------------------------
+
+  company-map
+
+---------------------------------*/
+.company__p-map {
+  margin: 90px auto 180px;
+}
+.company__p-map__content {
+}
+.company__p-map__desc {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.1rem;
+  @include mq("sp") {
+    font-size: 1.6rem;
+  }
+}
+.company__p-map__desc__iframe {
+  padding-top: 400 / 800 * 100%;
+  position: relative;
+  margin: 30px calc(50% - 50vw) 0;
+  width: 100vw;
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+.company__p-map__linkbox {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.1rem;
+  @include mq("sp") {
+    font-size: 1.6rem;
+  }
+}
+.company__p-map__link {
+  text-decoration: none;
+}

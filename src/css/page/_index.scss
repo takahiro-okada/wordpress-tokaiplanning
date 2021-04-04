@@ -1,0 +1,379 @@
+/*---------------------------------
+
+  kv
+
+---------------------------------*/
+.p-kv {
+  background-repeat: no-repeat;
+  position: relative;
+  height: 626px;
+  @include mq("sp") {
+    height: 400px;
+  }
+}
+.p-kv__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  animation: bgAnime 10s infinite; /* 4画像 × 各5s = 20s */
+  background-size: cover;
+  background-position: center center;
+}
+.p-kv__image.src1 {
+  background-image: url("../../image/index_01.png");
+}
+.p-kv__image.src2 {
+  background-image: url("../../image/index_02.png");
+  animation-delay: 3s;
+}
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.kv-text {
+  position: absolute;
+  font-size: 5rem;
+  top: 55%;
+  font-family: $ff-heading;
+  color: #fff;
+  @include mq("sp") {
+    font-size: 2.8rem;
+    top: 50%;
+  }
+}
+
+/*---------------------------------
+
+  lead
+
+---------------------------------*/
+.p-lead {
+  margin: 44px 0 0;
+}
+.p-lead__box {
+  border: 1px solid black;
+  padding: 24px 0;
+  display: flex;
+  @include mq("sp") {
+    display: block;
+  }
+}
+.p-lead__announce {
+  display: flex;
+  font-size: 1.8rem;
+  padding: 0 30px 0 84px;
+  position: relative;
+  white-space: nowrap;
+  align-items: center;
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+    right: 3px;
+    width: 10px; // 大きさ調整
+    height: 10px; // 大きさ調整
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  @include mq("sp") {
+    padding: 10px 20px 0;
+    width: fit-content;
+    &::after {
+      top: 8px;
+    }
+  }
+}
+.p-lead__news {
+  padding: 0 20px 0 40px;
+  @include mq("sp") {
+    padding: 10px 20px 0;
+  }
+}
+
+/*---------------------------------
+
+  service(swiper)
+
+---------------------------------*/
+.border {
+  background-image: url("../../image/border.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.p-service {
+  margin-top: 50px;
+}
+.p-service__content {
+  background-color: #dddddd;
+  padding: 66px 0;
+  margin: 0 auto;
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+.p-service__wrapper {
+  margin-top: 20px;
+}
+.p-service__inner {
+  display: flex;
+  @include mq("sp") {
+    display: block;
+  }
+}
+.p-service__box {
+  display: block;
+  text-decoration: none;
+  margin-top: 25px;
+  padding: 59px 0;
+  flex: 0 1 500px;
+  height: fit-content;
+  background-color: #fff;
+}
+.p-service__swiper-title {
+  font-size: 2.4rem;
+  position: relative;
+  line-height: 2em;
+  width: fit-content;
+  padding-left: 2em;
+  margin: 0 auto;
+  border-bottom: 1px solid #003c7b;
+  @include mq("sp") {
+    font-size: 2rem;
+  }
+}
+.p-service__swiper-title::after {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+.p-service__swiper-title._01::after {
+  background: url(../../image/icon/01.png) no-repeat;
+}
+.p-service__swiper-title._02::after {
+  background: url(../../image/icon/02.png) no-repeat;
+}
+.p-service__swiper-title._03::after {
+  background: url(../../image/icon/03.png) no-repeat;
+}
+.p-service__swiper-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  @include mq("sp") {
+    font-size: 1.2rem;
+  }
+}
+// スワイパーの調整
+.swiper-container {
+  flex: 0 1 690px;
+  margin-left: 87px;
+  @include mq("sp") {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+.swiper-slide {
+  text-align: center;
+}
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(5px);
+  transition: 0.2s linear;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+/*---------------------------------
+
+  area
+
+---------------------------------*/
+.p-area {
+  position: relative;
+  background-image: url(../../image/japan.png);
+  background-repeat: no-repeat;
+  background-size: 851px;
+  background-position: 157% 73%;
+  width: 1180px;
+  max-width: 100%;
+  height: 750px;
+  margin: 0 auto;
+  padding: 30px 0;
+  @include mq("tab") {
+    background-position: center center;
+    width: 100%;
+    background-size: contain;
+  }
+}
+.c-util__title.-p-area {
+  position: relative; /*相対配置*/
+}
+.index__bg {
+  @include mq("pc") {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -300px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 3000px;
+      background-image: url(../../image/index-border.png);
+    }
+  }
+}
+.p-area__content {
+  position: absolute;
+  width: 74%;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  @include mq("tab") {
+    top: 50%;
+    left: 50%;
+    width: 90%;
+  }
+}
+.p-area__content-top {
+  color: #003c7b;
+  font-size: 3.6rem;
+  font-weight: bold;
+  @include mq("tab") {
+    font-size: 2.4rem;
+  }
+}
+.p-area__content-sub {
+  position: relative;
+  font-size: 2rem;
+  width: 93%;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../../image/area-border.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 125px;
+    bottom: -134px;
+    right: 0;
+  }
+  @include mq("tab") {
+    &::after {
+      display: none;
+    }
+  }
+}
+.p-area__content-desc {
+  font-size: 3.6rem;
+  margin-top: 20px;
+  @include mq("tab") {
+    font-size: 2.4rem;
+  }
+}
+/*---------------------------------
+
+  message
+  
+---------------------------------*/
+.p-message {
+}
+.p-message-wrapper {
+  margin-top: 30px;
+  height: 600px;
+  background-color: #7f7f7f;
+  position: relative;
+  z-index: -1;
+  @include mq("tab") {
+    height: 600px;
+  }
+  @include mq("sp") {
+    height: 400px;
+  }
+}
+.p-message-content {
+  width: 1280px;
+  max-width: 100%;
+  position: absolute;
+  padding: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background-image: url(../../image/index__message.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: 0 20px;
+  @include mq("tab") {
+    padding: 60px 20px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background-image: url(../../image/index__message-sp.jpg);
+    background-size: cover;
+    background-position: 0;
+    &::before {
+      background-color: rgba(0, 0, 0, 0.4);
+      /* 自由に位置指定 */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: " ";
+      z-index: -1;
+    }
+  }
+}
+.p-message__title {
+  font-size: 3.6rem;
+  color: $cr-m;
+  @include mq("tab") {
+    z-index: 10;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  @include mq("sp") {
+    font-size: 1.8rem;
+  }
+}
+.p-message__text {
+  font-size: 2.1rem;
+  @include mq("tab") {
+    margin-top: 20px;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  @include mq("sp") {
+    margin-top: 20px;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,42 @@
+.c-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 300px;
+	max-width: 100%;
+	border: 2px solid #424242;
+	color: #424242;
+	letter-spacing: normal;
+	font-weight: 700;
+	line-height: 1.4;
+	height: auto;
+	margin: 0;
+	background-image: none;
+	background-color: transparent;
+	text-decoration: none;
+	border-radius: 0;
+	font-size: 16px;
+	text-align: center;
+	-webkit-appearance: none;
+	position: relative;
+	transition: all 0.3s ease 0s;
+
+	&:not(:disabled) {
+		cursor: pointer;
+	}
+
+	&:hover {
+		outline: none;
+	}
+
+	@if $no-focus {
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-moz-foucus-inner {
+			padding: 0;
+			border: none;
+		}
+	}
+}

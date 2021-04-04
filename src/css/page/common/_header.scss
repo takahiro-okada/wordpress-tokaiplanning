@@ -1,0 +1,254 @@
+.p-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: map-get($layer, "header");
+	height: $header-height;
+	background-color: #fff;
+	@include mq("tab") {
+		height: $header-height-sp;
+	}
+}
+.p-header__inner {
+	margin: 0 auto;
+	padding: 0 20px;
+	height: inherit;
+	position: relative;
+	width: 1680px;
+	max-width: 100%;
+}
+
+.p-header__row {
+	display: flex;
+	flex-wrap: nowrap;
+	height: inherit;
+	align-items: center;
+}
+
+.p-header__logo {
+	margin-right: auto;
+	width: 410px;
+	transition: all 0.3s ease 0s;
+	text-decoration: none;
+	@include mq("sp") {
+		width: 250px;
+	}
+	@include mq("se") {
+		width: 200px;
+	}
+	&:hover {
+		opacity: $opacity;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+.p-header__nav {
+	@include mq("tab") {
+		display: none;
+	}
+}
+.p-header__list {
+	display: flex;
+	align-items: center;
+	@include mq("tab") {
+		display: none;
+	}
+}
+
+.p-header__item {
+	margin-right: 46px;
+	&:first-child {
+		margin-left: 46px;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	> a {
+		// font-family: $ff-tbc;
+		text-decoration: none;
+		color: $cr-m;
+		font-weight: bold;
+		display: block;
+		transition: all 0.3s ease 0s;
+		word-break: keep-all;
+		&:hover {
+			opacity: $opacity;
+		}
+	}
+}
+
+.p-header__cta {
+	margin-left: 30px;
+	@include mq("tab") {
+		display: none;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+	}
+	.el-header-cta {
+	}
+	a {
+		text-decoration: none;
+		display: block;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+// トグル
+.js-toggle-menu {
+	display: none;
+}
+.toggle-menu {
+	position: absolute;
+	background-color: rgba($color: #000000, $alpha: 0.6);
+	margin-left: -60px;
+	position: absolute;
+	margin-top: 10px;
+}
+.toggle-item {
+	&:not(:last-child) {
+		border-bottom: 1px solid #fff;
+	}
+}
+.toggle-link {
+	display: inline-block;
+	padding: 10px 10px 10px 20px;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	position: relative;
+	&::before {
+		content: "\f105";
+		color: $cr-m;
+		font-family: FontAwesome;
+		font-size: 1.8rem;
+		margin-right: 1em;
+	}
+}
+
+.button {
+	@include mq("pc") {
+		display: none;
+	}
+	display: inline-block;
+	text-decoration: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.hamburger {
+	position: fixed;
+	top: 16px;
+	right: 20px;
+	z-index: 3;
+	width: 48px;
+	height: 48px;
+	// box-shadow: 0 0 2rem transparent;
+	outline: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	&:hover,
+	&:focus {
+		// box-shadow: 0 0 0.5rem rgba(161, 161, 161, 0.5);
+	}
+}
+
+.hamburger__line {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 30px;
+	height: 4px;
+	background-color: $cr-m;
+	transition: inherit;
+	&::before,
+	&::after {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: inherit;
+		content: "";
+		-webkit-transition: inherit;
+		transition: inherit;
+	}
+}
+
+.hamburger__line::before {
+	top: -10px;
+}
+.hamburger__line::after {
+	top: 10px;
+}
+.hamburger[aria-expanded="true"] {
+	// border: 1px solid #fff !important;
+}
+.hamburger[aria-expanded="true"] .hamburger__line {
+	background-color: transparent;
+	&::before,
+	&::after {
+		top: 0;
+		background-color: #fff;
+	}
+}
+.hamburger[aria-expanded="true"] .hamburger__line::before {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.hamburger[aria-expanded="true"] .hamburger__line::after {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.sp-global-menu {
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	height: 100vh;
+	background-color: rgba(000, 000, 000, 0.9);
+	color: #fff;
+	visibility: hidden;
+}
+.c-drawer__nav {
+}
+.c-drawer__list {
+	margin: 100px auto;
+	overflow-y: scroll;
+}
+.c-drawer__item {
+	color: #fff;
+	text-align: center;
+}
+.c-drawer__link {
+	color: inherit;
+	display: inline-block;
+	font-size: 2rem;
+	text-decoration: none;
+	padding: 20px 0;
+}
+.c-drawer__cta-list {
+	margin-top: 20px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+}

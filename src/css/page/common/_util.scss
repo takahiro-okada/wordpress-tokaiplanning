@@ -1,0 +1,191 @@
+// h2見出し
+.c-util__title {
+  &::first-line {
+    font-size: 3.2rem;
+    color: #023c7b;
+    text-align: center;
+    font-family: $ff-han;
+  }
+  &::first-letter {
+    color: #757575;
+  }
+  font-family: $ff-tbc;
+  font-size: 1.6rem;
+  text-align: center;
+}
+// 下層ページのh2見出し
+.c-util__titlesub {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+  color: #023c7b;
+  font-size: 1.6rem;
+  &::first-line {
+    font-size: 3.2rem;
+    color: #000;
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0 auto;
+
+    text-align: center;
+    @include mq("sp") {
+      font-size: 2.4rem;
+    }
+  }
+}
+.c-util__titlesub {
+  &::after {
+  }
+}
+.c-util__titlesub._service-lease {
+  width: fit-content;
+  &::after {
+    display: inline-block;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 30px;
+    height: 40px;
+    background-size: contain;
+    background: url(../../image/icon/01.png) no-repeat;
+  }
+}
+.c-util__titlesub._service-store {
+  width: fit-content;
+
+  &::after {
+    display: inline-block;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 30px;
+    height: 40px;
+    background-size: contain;
+    background: url(../../image/icon/02.png) no-repeat;
+  }
+}
+.c-util__titlesub._service-other {
+  width: fit-content;
+
+  &::after {
+    display: inline-block;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 30px;
+    height: 40px;
+    background-size: contain;
+    background: url(../../image/icon/03.png) no-repeat;
+  }
+}
+
+// 下層ページのkv
+.p-utilkv {
+  height: 650px;
+  position: relative;
+  background-color: gray;
+  @include mq("sp") {
+    height: 500px;
+  }
+}
+.p-utilkv__box {
+  padding-top: 300px;
+  @include mq("sp") {
+    padding-top: 300px;
+  }
+}
+.p-utilkv__text {
+  background-color: #fff;
+  padding: 20px 30px;
+  font-size: 4.8rem;
+  color: #fff;
+  font-weight: bold;
+  width: fit-content;
+  &::first-line {
+    font-size: 4.8rem;
+    color: #023c7b;
+    text-align: center;
+  }
+  &::first-letter {
+    color: #757575;
+  }
+  @include mq("sp") {
+    padding: 10px 15px;
+    font-size: 3rem;
+    &::first-line {
+      font-size: 3rem;
+    }
+  }
+}
+.p-utilkv__desc {
+  color: #000;
+  font-size: 2.8rem;
+  margin-left: 2em;
+  @include mq("sp") {
+    font-size: 2rem;
+  }
+}
+// 野立て看板
+.p-utilkv._lease {
+  background-image: url(../../image/uotarou_top1.JPG);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq("sp") {
+    background-position: 70% 100%;
+  }
+}
+.p-utilkv._about {
+  background-image: url(../../image/about__kv.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p-utilkv._store {
+  background-image: url(../../image/kv__store.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p-utilkv._other {
+  background-image: url(../../image/kv__other.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq("sp") {
+    background-position: 60% 100%;
+  }
+}
+// 会社概要ヘッダー
+.p-utilkv._company {
+  background-image: url(../../image/kv__company.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq("sp") {
+    background-position: 100% 100%;
+  }
+}
+
+.service__p-utilkv__box {
+  padding-top: 20%;
+  @include mq("sp") {
+    padding-top: 320px;
+  }
+}
+.service__p-utilkv__text {
+  padding: 20px 30px;
+  font-size: 4.8rem;
+  color: #fff;
+  @include mq("sp") {
+    font-size: 2.4rem;
+  }
+}
